@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd
+  name: nginx
   namespace: argocd
   # Add a this finalizer ONLY if you want these to cascade delete.
   finalizers:
@@ -13,12 +13,11 @@ spec:
   source:
     repoURL: https://github.com/KEA-Lucky7/MOABOA-GitOps.git
     targetRevision: HEAD
-    path: apps
+    path: charts/nginx
   
   destination:
     server: https://kubernetes.default.svc
-    # The namespace will only be set for namespace-scoped resources that have not set a value for .metadata.namespace
-    namespace: default
+    namespace: my-
   
   syncPolicy:
     automated: 
@@ -26,4 +25,4 @@ spec:
       selfHeal: true   
     # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.  
     syncOptions:
-      - CreateNamespace=true
+      - CreateNamespace=true   
