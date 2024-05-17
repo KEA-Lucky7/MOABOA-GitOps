@@ -1,23 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx
+  name: nginx-ingress
   namespace: argocd
   # Add a this finalizer ONLY if you want these to cascade delete.
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 
 spec:
-  project: apps
+  project: default
   
   source:
     repoURL: https://github.com/KEA-Lucky7/MOABOA-GitOps.git
-    targetRevision: HEAD
-    path: charts/nginx
+    targetRevision: main
+    path: charts/nginx-ingress
   
   destination:
     server: https://kubernetes.default.svc
-    namespace: my-
+    namespace: moaboa
   
   syncPolicy:
     automated: 
@@ -25,4 +25,4 @@ spec:
       selfHeal: true   
     # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.  
     syncOptions:
-      - CreateNamespace=true   
+      - 'CreateNamespace=true'
