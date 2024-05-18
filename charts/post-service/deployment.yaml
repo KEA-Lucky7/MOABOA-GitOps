@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: post-service-rollout
+spec:
+  replicas: 2
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: post-service-pod
+  template:
+    metadata:
+      labels:
+        app: post-service-pod
+    spec:
+      containers:
+      - name: rollout-post
+        image: lucky7-cr/post-service:20
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9000
+  strategy:
+    canary:
+      maxSurge: "50%"
+      maxUnavailable: 0
+      steps:
+      - setWeight: 25
+      - pause: {}
