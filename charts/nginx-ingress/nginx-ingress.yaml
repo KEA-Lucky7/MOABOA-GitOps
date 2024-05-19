@@ -51,3 +51,10 @@ spec:
             name: auth-service
             port:
               number: 80
+      - path: /member
+        pathType: Prefix
+        backend:
+          service:
+            name: member-service
+            port:
+              number: 80
