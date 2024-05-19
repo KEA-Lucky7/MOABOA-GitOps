@@ -41,7 +41,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: report-service
+            name: mission-service
             port:
               number: 80
       - path: /auth
@@ -56,5 +56,12 @@ spec:
         backend:
           service:
             name: member-service
+            port:
+              number: 80
+      - path: /blog
+        pathType: Prefix
+        backend:
+          service:
+            name: blog-service
             port:
               number: 80
