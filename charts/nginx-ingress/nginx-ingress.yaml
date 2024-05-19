@@ -30,7 +30,14 @@ spec:
             name: search-service
             port:
               number: 80
-      - path: /report
+      - path: /reports
+        pathType: Prefix
+        backend:
+          service:
+            name: report-service
+            port:
+              number: 80
+      - path: /quiz
         pathType: Prefix
         backend:
           service:
