@@ -23,3 +23,10 @@ spec:
             name: post-service
             port:
               number: 80
+      - path: /search
+        pathType: Prefix
+        backend:
+          service:
+            name: search-service
+            port:
+              number: 80
