@@ -30,3 +30,10 @@ spec:
             name: search-service
             port:
               number: 80
+      - path: /report
+        pathType: Prefix
+        backend:
+          service:
+            name: report-service
+            port:
+              number: 80
