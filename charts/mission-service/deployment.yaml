@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: rollout-post
-        image: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/mission-service:13
+        image: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/mission-service:14
         imagePullPolicy: Always
         ports:
         - containerPort: 9000
