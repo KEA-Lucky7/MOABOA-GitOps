@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: rollout-search
-        image: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/search-service:5
+        image: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/search-service:6
         imagePullPolicy: Always
         ports:
         - containerPort: 9000
