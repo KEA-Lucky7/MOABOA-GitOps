@@ -21,6 +21,9 @@ spec:
         - containerPort: 9000
       imagePullSecrets:
       - name: kc-lucky7-cr
+      envFrom:
+      - secretRef:
+          name: moaboa-env
   strategy:
     canary:
       maxSurge: 1  
