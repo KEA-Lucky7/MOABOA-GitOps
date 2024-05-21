@@ -15,6 +15,9 @@ spec:
     spec:
       containers:
       - name: rollout-post
+        envFrom:
+        - secretRef:
+            name: moaboa-env
         image: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/member-service:2
         imagePullPolicy: Always
         ports:
