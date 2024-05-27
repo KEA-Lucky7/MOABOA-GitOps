@@ -37,6 +37,8 @@ spec:
             name: report-service
             port:
               number: 80
+        annotations:
+          nginx.ingress.kubernetes.io/auth-url: "auth-service/auth/token/validation"
       - path: /quiz
         pathType: Prefix
         backend:
