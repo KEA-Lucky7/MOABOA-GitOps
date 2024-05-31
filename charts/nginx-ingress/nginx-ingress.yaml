@@ -60,6 +60,13 @@ spec:
             name: auth-service
             port:
               number: 80
+      - path: /oauth2
+        pathType: Prefix
+        backend:
+          service:
+            name: auth-service
+            port:
+              number: 80
       - path: /member
         pathType: Prefix
         backend:
