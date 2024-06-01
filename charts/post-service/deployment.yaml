@@ -18,7 +18,7 @@ spec:
         envFrom:
         - secretRef:
             name: moaboa-env
-        image: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/post-service:94
+        image: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/post-service:95
         imagePullPolicy: Always
         ports:
         - containerPort: 9000
