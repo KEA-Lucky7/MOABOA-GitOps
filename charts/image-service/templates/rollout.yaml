@@ -16,12 +16,18 @@ spec:
       containers:
       - name: rollout-image
         envFrom:
+        - configMapRef:
+            name: image-service-config
         - secretRef:
             name: {{ .Values.envSecretName }}
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.targetPort }}
+      - name: redis
+        image: redis:latest
+        ports:
+        - containerPort: 6379
       imagePullSecrets:
       - name: {{ .Values.imagePullSecretName }}
   strategy:
