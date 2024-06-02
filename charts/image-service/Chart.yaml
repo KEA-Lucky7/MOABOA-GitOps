@@ -1,0 +1,5 @@
+apiVersion: v2
+name: image-service
+description: image service
+version: 0.1.0
+appVersion: "1.0"
