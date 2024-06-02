@@ -81,3 +81,10 @@ spec:
             name: blog-service
             port:
               number: 80
+      - path: /image
+        pathType: Prefix
+        backend:
+          service:
+            name: blog-service
+            port:
+              number: 80
