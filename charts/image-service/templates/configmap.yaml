@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: image-service-config
+data:
+  SPRING_REDIS_HOST: "localhost"
+  SPRING_REDIS_PORT: "6379"
