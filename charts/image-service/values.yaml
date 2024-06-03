@@ -3,7 +3,7 @@ revisionHistoryLimit: 1
 
 image:
   repository: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/image-service
-  tag: 4
+  tag: 7
   pullPolicy: Always
 
 service:
