@@ -5,3 +5,6 @@ metadata:
 data:
   SPRING_REDIS_HOST: "localhost"
   SPRING_REDIS_PORT: "6379"
+  IMAGE_BUCKET_NAME: "image"
+  IMAGE_BUCKET_URL: "https://objectstorage.kr-central-2.kakaoi.io/v1/b14822f0fe464bdba905879b1c8ffece"
+  IMAGE_CDN_URL: "d17b53e9b4da48efa7c726692ad347a0.kakaoiedge.com"
