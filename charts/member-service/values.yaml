@@ -3,7 +3,7 @@ revisionHistoryLimit: 1
 
 image:
   repository: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/member-service
-  tag: 41
+  tag: 43
   pullPolicy: Always
 
 service:
