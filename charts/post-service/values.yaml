@@ -3,7 +3,7 @@ revisionHistoryLimit: 1
 
 image:
   repository: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/post-service
-  tag: 115
+  tag: 116
   pullPolicy: Always
 
 service:
