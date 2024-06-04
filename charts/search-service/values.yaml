@@ -3,7 +3,7 @@ revisionHistoryLimit: 1
 
 image:
   repository: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/search-service
-  tag: 25
+  tag: 26
   pullPolicy: Always
 
 service:
