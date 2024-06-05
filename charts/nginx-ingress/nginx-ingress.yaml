@@ -95,7 +95,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: grafana
-            namespace: default
+            name: headless-to-default
             port:
               number: 80
