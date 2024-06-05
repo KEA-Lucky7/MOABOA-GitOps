@@ -96,5 +96,6 @@ spec:
         backend:
           service:
             name: grafana
+            namespace: default
             port:
               number: 80
