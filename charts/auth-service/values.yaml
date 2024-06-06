@@ -3,7 +3,7 @@ revisionHistoryLimit: 1
 
 image:
   repository: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/auth-service
-  tag: 83
+  tag: 84
   pullPolicy: Always
 
 service:
