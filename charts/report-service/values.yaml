@@ -15,6 +15,7 @@ selector:
   app: report-service-pod
 
 envSecretName: moaboa-env
+sealedSecretName: report-vault-token
 imagePullSecretName: kc-lucky7-cr
 
 canary:
