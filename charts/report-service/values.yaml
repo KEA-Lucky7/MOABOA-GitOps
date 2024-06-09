@@ -3,7 +3,7 @@ revisionHistoryLimit: 1
 
 image:
   repository: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/report-service
-  tag: 34
+  tag: 35
   pullPolicy: Always
 
 service:
