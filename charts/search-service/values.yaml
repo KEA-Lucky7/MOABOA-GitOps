@@ -15,6 +15,7 @@ selector:
   app: search-service-pod
 
 envSecretName: moaboa-env
+sealedSecretName: search-vault-token
 imagePullSecretName: kc-lucky7-cr
 
 canary:
