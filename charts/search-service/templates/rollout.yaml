@@ -17,7 +17,7 @@ spec:
       - name: rollout-search
         envFrom:
         - secretRef:
-            name: {{ .Values.envSecretName }}
+            name: {{ .Values.sealedSecretName }}
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
