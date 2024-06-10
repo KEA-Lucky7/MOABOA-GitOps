@@ -1,0 +1,24 @@
+replicaCount: 2
+revisionHistoryLimit: 1
+
+image:
+  repository: gcu-lucky7-dev.kr-central-2.kcr.dev/lucky7-cr/frontend-service
+  tag: 1
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 80
+
+selector:
+  app: frontend-service-pod
+
+sealedSecretName: frontend-service-env
+imagePullSecretName: kc-lucky7-cr
+
+canary:
+  maxSurge: 1
+  maxUnavailable: 0
+  steps:
+    - setWeight: 50
