@@ -12,7 +12,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: vision-necktitude.shop
+    http:
       paths:
       - path: /
         pathType: Exact
