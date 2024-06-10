@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: blog-service-rollout
+  name: frontend-service-rollout
 spec:
   replicas: {{ .Values.replicaCount }}
   revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
@@ -14,7 +14,7 @@ spec:
         app: {{ .Values.selector.app }}
     spec:
       containers:
-      - name: rollout-blog
+      - name: rollout-frontend
         envFrom:
         - secretRef:
             name: {{ .Values.sealedSecretName }}
